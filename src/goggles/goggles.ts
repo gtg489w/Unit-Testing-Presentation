@@ -22,7 +22,7 @@ export class Goggles {
 	}
 
 	setTemperatureOutside(temperature) {
-		this.temperatureInside = temperature;
+		this.temperatureOutside = temperature;
 	}
 
 	setHumidity(humidity) {
