@@ -14,7 +14,7 @@ export class Goggles {
 	}
 
 	setName(name) {
-		name = name;
+		this.name = name;
 	}
 
 	setTemperatureInside(temperature) {
