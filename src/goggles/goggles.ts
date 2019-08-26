@@ -30,7 +30,7 @@ export class Goggles {
 	}
 
 	getDewPoint() {
-		return this.temperatureInside - 100 - this.humidity / 5;
+		return this.temperatureInside - ((100 - this.humidity) / 5);
 	}
 
 	isFogging() {

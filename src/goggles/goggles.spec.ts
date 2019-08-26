@@ -47,4 +47,20 @@ describe('Goggles', () => {
 		const result = goggles.getDewPoint();
 		expect(result).to.equal(-19);
 	});
+
+	it('should not be fogging', () => {
+		goggles.setTemperatureInside(0);
+		goggles.setTemperatureOutside(-18);
+		goggles.setHumidity(5);
+		const result = goggles.isFogging();
+		expect(result).to.be.false;
+	});
+
+	it('should be fogging', () => {
+		goggles.setTemperatureInside(0);
+		goggles.setTemperatureOutside(-20);
+		goggles.setHumidity(5);
+		const result = goggles.isFogging();
+		expect(result).to.be.true;
+	});
 });
